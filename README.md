@@ -3,3 +3,4 @@ AI Labo
 test
 aaaaaaaaaaaaaaaaaaaaaaaaaa
 miyazaki
+kinoshita yeee
