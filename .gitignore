@@ -1,0 +1,7 @@
+db.sqlite3
+ai_labo/__pycache__
+api/__pycache__
+api/migrations
+app/__pycache__
+app/migrations
+train/__pycache__

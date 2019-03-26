@@ -1,0 +1,46 @@
+#board{
+    position            : relative;
+}
+
+.cell
+{
+    position            : relative;
+    top                 : 1px;
+    left                : 1px;
+    width               : 31px;
+    height              : 31px;
+    background-color    : #00ff00;
+}
+.active >.cell
+{
+    position            : relative;
+    top                 : 1px;
+    left                : 1px;
+    width               : 31px;
+    height              : 31px;
+    background-color    : #0000FF;
+}
+
+.square
+{
+    position            : absolute;
+    width               : 33px;
+    height              : 33px;
+    background-color    : #000000;
+}
+
+
+.block
+{
+    display             : block;
+    position            : relative;
+    top                 : 1px;
+    left                : 1px;
+    width               : 31px;
+    height              : 31px;
+}
+
+input
+{
+  width: : 30px
+}

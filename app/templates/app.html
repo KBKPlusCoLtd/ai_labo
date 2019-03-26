@@ -1,0 +1,63 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>Othello</title>
+	<link href="{% static 'css/board.css' %}" rel="stylesheet">
+</head>
+
+<body>
+	<table border = '1' class = 'status' style = 'display:none'>
+		<tr>
+			<th>Lv</th>
+			<th>手番</th>
+			<th>黒</th>
+			<th>白</th>
+			<th>結果</th>
+		</tr>
+		<tr>
+			<td id = 'level'></td>
+			<td id = 'turn'></td>
+			<td id = 'blackScore'>2</td>
+			<td id = 'whiteScore'>2</td>
+			<td id = 'status'></td>
+		</tr>
+	</table>
+	<div style="display:none">
+		<div id="cell" class="square"><div class="cell"></div></div>
+		<div id="black" class="square"><img class="block" src="{% static 'img/black.png'%}"></img></div>
+		<div id="white" class="square"><img class="block" src="{% static 'img/white.png'%}"></img></div>
+	</div>
+	<div class = 'turn'>
+		<input type = 'radio' name = 'turn' value = '1' checked = 'checked'>先行
+		<input type = 'radio' name = 'turn' value = '2'>後攻
+	</div>
+	<div class = 'level'>
+		<input type = 'radio' name = 'level' value = '1' checked = 'checked'>1
+		<input type = 'radio' name = 'level' value = '2'>2
+		<input type = 'radio' name = 'level' value = '3'>3
+		<input type = 'radio' name = 'level' value = '4'>4
+  	<input type = 'radio' name = 'level' value = '5'>5
+		<input type = 'radio' name = 'level' value = '6'>6
+		<input type = 'radio' name = 'level' value = '7'>7
+		<input type = 'radio' name = 'level' value = '8'>8
+		<input type = 'radio' name = 'level' value = '9'>9
+		<input type = 'radio' name = 'level' value = '10'>10
+	</div>
+	<div class = 'board'>
+		<input type = 'radio' name = 'board' value = '4' checked = 'checked'>4x4
+		<input type = 'radio' name = 'board' value = '6'>6x6
+		<input type = 'radio' name = 'board' value = '8'>8x8
+	</div>
+	<div>
+		<input type = 'button' id = 'btn' value = '始める'>
+	</div>
+
+	<form method="post">{% csrf_token %}
+		<div id="board"></div>
+	</form>
+	<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/othello.js' %}"></script>
+</body>
+</html>
